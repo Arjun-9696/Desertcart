@@ -12,6 +12,7 @@
   width: 350px;
   height: 49px;
   margin-left: 100px;
+  position: relative;
 }
 #outer {
   width: 100%;
@@ -110,9 +111,9 @@ svg:hover {
   padding: 15px;
   text-decoration: none;
 }
-.subnavbar a:nth-child(1) {
+/* .subnavbar a:nth-child(1) {
   margin-left: 162px;
-}
+} */
 
 /* The subnavigation menu */
 .subnavbar {
