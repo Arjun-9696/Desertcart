@@ -1,0 +1,320 @@
+/* Navbar css */
+* {
+  font-family: Lato, sans-serif;
+}
+#header {
+  display: flex;
+  justify-content: space-between;
+  height: 30px;
+  margin-bottom: 30px;
+}
+#header > div {
+  width: 350px;
+  height: 49px;
+  margin-left: 100px;
+}
+#outer {
+  width: 100%;
+}
+#outer > div {
+  width: 85%;
+  height: 200px;
+  margin: auto;
+  padding: 10px;
+}
+#outer > div:nth-child(1) {
+  height: 400px;
+  width: 98%;
+}
+a > img {
+  width: 60%;
+  height: 55%;
+  padding: 10px;
+}
+.SvgIcon-root {
+  fill: currentColor;
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  font-size: 1.2857142857142856rem;
+  transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  flex-shrink: 0;
+  user-select: none;
+}
+svg:hover {
+  background-color: gray;
+  border-radius: 50%;
+  height: 1em;
+  width: 1em;
+}
+.header_left {
+  display: flex;
+  width: 50px;
+}
+.header_left > p {
+  display: flex;
+  width: 50px;
+}
+#globe {
+  padding: 15px;
+}
+.header_right {
+  width: 0px;
+  display: flex;
+}
+.Header__right-link {
+  color: #4c505b;
+  cursor: pointer;
+}
+#signorcreat {
+  margin-top: 15px;
+}
+.cartsymbol {
+  display: flex;
+}
+#cartsymbol > img {
+  height: 70%;
+  width: 80%;
+  margin-left: 10px;
+  margin-top: 8px;
+  color: #4c565b;
+  cursor: pointer;
+}
+#cartsymbol > a > img:hover {
+  background-color: gray;
+  border-radius: 50%;
+  height: 55%;
+  width: 60%;
+}
+.Header__right-link:hover {
+  background-color: gray;
+  border-radius: 10px;
+  height: 10px;
+  width: 10px;
+  color: black;
+}
+/* The navigation menu */
+.subnavbar {
+  overflow: hidden;
+  background-color: white;
+}
+.subnavbar:hover {
+  background-color: grey;
+}
+/* Navigation links */
+.subnavbar a {
+  margin-left: 50px;
+  font-size: 16px;
+  color: black;
+  text-align: center;
+  padding: 15px;
+  text-decoration: none;
+}
+.subnavbar a:nth-child(1) {
+  margin-left: 162px;
+}
+
+/* The subnavigation menu */
+.subnavbar {
+  float: left;
+  overflow: hidden;
+}
+/* Subnav button */
+.subnavbar .subnavbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: black;
+  padding: 10px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+/* Add a red background color to navigation links on hover */
+.subnavbar a:hover {
+  background-color: rgb(155, 223, 255);
+  display: block;
+}
+
+/* Style the subnav content - positioned absolute */
+.subnav-content {
+  display: none;
+  position: absolute;
+  left: 0;
+  background-color: white;
+  width: 100%;
+  z-index: 1;
+}
+
+/* Style the subnav links */
+.subnav-content a {
+  float: left;
+  color: black;
+  text-decoration: none;
+}
+
+/* Add a grey background color on hover */
+.subnav-content a:hover {
+  background-color: rgb(155, 223, 255);
+  color: black;
+}
+
+/* When you move the mouse over the subnav container, open the subnav content */
+.subnavbar:hover .subnav-content {
+  display: block;
+}
+.DesktopMenu_top-cat--menu {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.MuiList-root {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  list-style: none;
+}
+.MuiPaper-root {
+  color: rgba(0, 0, 0, 0.87);
+  transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  background-color: #fff;
+}
+
+/* search portion */
+#desertimg {
+  background-image: url('https://cdn.desertcart.com/static/media/supportpage.0dc5295a.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  display: flex;
+}
+#searchinput {
+  margin: auto;
+}
+#searchin {
+  width: 500px;
+  height: 30px;
+  border-radius: 30px;
+  border: transparent;
+  padding: 5px;
+}
+.SvgIcon {
+  height: 1em;
+  width: 1em;
+}
+a {
+  text-decoration: initial;
+  color: black;
+}
+/* body */
+#deal > img {
+  width: 100%;
+  height: 100%;
+}
+/* The Perfumery body */
+h2 {
+  margin-left: 8%;
+  font-size: 20px;
+}
+#cat1 {
+  display: flex;
+  width: 100%;
+}
+#cat1 > div > img {
+  width: 100%;
+  border-radius: 2px;
+}
+#cat1 > div {
+  width: 40%;
+  margin: 10px;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+#cat > div,
+h4,
+img,
+p:hover {
+  cursor: pointer;
+}
+h4,
+p {
+  margin-left: 20px;
+  font-weight: normal;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+p {
+  font-size: 13px;
+  font-weight: lighter;
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+h4 {
+  font-size: 15px;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+#outer > div:nth-child(4) {
+  height: 40%;
+  margin-top: 20px;
+}
+#outer > div:nth-child(even) {
+  height: 40%;
+  margin-top: 20px;
+}
+#help {
+  margin-top: 50px;
+  width: 100%;
+}
+/* Help body */
+#help > div {
+  display: flex;
+}
+.footer {
+  text-align: center;
+  margin: auto;
+}
+.footertitle {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 12px;
+}
+.Footerdescr,
+.footerlink {
+  font-size: 10px;
+  color: grey;
+}
+/* Last body */
+#last {
+  width: 100%;
+  margin-top: 30px;
+}
+#last > div {
+  margin: auto;
+  padding: 40px;
+}
+#last > div > a > button {
+  padding: 5px 25px 5px 25px;
+  border: transparent;
+  background-color: white;
+}
+#last > div > a > button:hover {
+  background-color: grey;
+  cursor: pointer;
+}
+#social {
+  width: 10%;
+  margin: auto;
+}
+#social > div {
+  margin-right: 30px;
+}
+h5 {
+  width: 10%;
+  margin: auto;
+  padding: 15px;
+  text-align: center;
+}
