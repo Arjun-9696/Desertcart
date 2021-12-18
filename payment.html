@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payment</title>
+    <style>
+      * {
+        font-family: Lato, sans-serif;
+      }
+      #logo {
+        width: 30%;
+        height: 60px;
+        margin: auto;
+        margin-bottom: 0;
+      }
+      #logo > img {
+        width: 100%;
+        height: 100%;
+      }
+      #desertcart {
+        width: 80%;
+        height: 300px;
+        margin: auto;
+      }
+      #loginpage {
+        width: 30%;
+        margin: auto;
+        padding: 30px;
+      }
+
+      #outer {
+        width: 97%;
+        padding: 20px;
+        background-image: url('https://cdn.desertcart.com/static/media/supportpage.0dc5295a.png');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 100% 100%;
+      }
+      #desertcart {
+        height: 500px;
+        width: 100%;
+        background-image: url('https://scontent.fccj6-1.fna.fbcdn.net/v/t1.6435-9/36897119_2194814840755017_277673436732456960_n.jpg?_nc_cat=109&ccb=1-5&_nc_sid=6e5ad9&_nc_ohc=cDY7-AvEuuQAX8HnBBc&_nc_oc=AQkU_W1qxpg0DgfVyzXI-qtKsVlbvDJe8ZnFxzyKghsZO1NVPS97GghLRU7n9EF_wrTkEtDVJt5X04H-9nWWhVs1&_nc_ht=scontent.fccj6-1.fna&oh=00_AT_enfEf2Qv_zMYl-TPiwCJjiItQGyerop4aZ521spGwxw&oe=61E1409B');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 100% 100%;
+        display: flex;
+      }
+      div > input {
+        margin: 5px;
+      }
+      button {
+        width: 90%;
+        height: 30px;
+        margin-top: 20px;
+        margin-left: 5px;
+        background-color: rgb(242, 202, 106);
+        border: transparent;
+        border-radius: 30px;
+        padding: 15 15 15 15;
+      }
+      button:hover {
+        background-color: rgb(3, 146, 241);
+        color: white;
+      }
+      h1 {
+        margin-left: 12px;
+        margin-top: 5px;
+      }
+      p {
+        font-size: smaller;
+        margin-left: 15px;
+        margin-bottom: 0;
+      }
+      #email,
+      #password,
+      #name,
+      #mobile,
+      #price {
+        width: 500px;
+        height: 30px;
+        border-radius: 30px;
+        border: transparent;
+        padding: 5px;
+        width: 90%;
+      }
+      a:hover {
+        color: black;
+        background-color: rgb(8, 8, 8);
+        text-decoration-line: underline;
+      }
+      a {
+        color: black;
+        text-decoration: black;
+      }
+      .passp {
+        margin-top: 0;
+        margin-bottom: 15px;
+        font-size: 11px;
+      }
+      #pay {
+        width: 150px;
+        height: 25px;
+        background-color: rgb(161, 216, 221);
+        border: 1px solid black;
+        border-radius: 30px;
+        margin-left: 10px;
+        margin-top: 13px;
+        text-align: center;
+      }
+      h6 {
+        margin-left: 10px;
+        margin-bottom: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="outer">
+      <div id="logo">
+        <img
+          src="https://www.desertcart.ae/newlogo-transparent@whitebg.png"
+          alt=""
+        />
+      </div>
+      <div id="loginpage">
+        <div>
+          <h1>Enter Details for Payment</h1>
+          <p>Your name</p>
+          <input id="name" type="text" placeholder="Enter Name" />
+          <p>Address</p>
+          <input id="email" type="text" placeholder="Enter Address" />
+          <p>City</p>
+          <input type="text" id="password" placeholder="Enter City" />
+          <p>Mobile</p>
+          <input type="text" id="mobile" placeholder="Enter Mobile Number" />
+          <h6>* recommended for UPI</h6>
+          <select id="pay">
+            <option value="">Payment Method</option>
+            <option value="upi">UPI</option>
+            <option value="ib">Internet banking</option>
+            <option value="card">Card Payment</option>
+          </select>
+          <button>Continue</button>
+          <div id="paydiv"></div>
+          <div id="amt">
+            <input type="number" id="price" placeholder="Enter Amount" />
+            <button id="button">Pay</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+<script>
+  var paymentAmt = JSON.parse(localStorage.getItem('paymentPrice'));
+  document.querySelector('button').addEventListener('click', signUp);
+  function signUp() {
+    var name = document.querySelector('#name').value;
+    var address = document.querySelector('#email').value;
+    var city = document.querySelector('#password').value;
+    var mobile = document.querySelector('#mobile').value;
+    var paymode = document.querySelector('#pay').value;
+    var div = document.createElement('div');
+    var n = document.createElement('p');
+    var a = document.createElement('p');
+    var c = document.createElement('p');
+    var m = document.createElement('p');
+    var p = document.createElement('p');
+    var pay = document.createElement('p');
+    n.textContent = name;
+    a.textContent = address;
+    c.textContent = city;
+    m.textContent = mobile;
+    pay.textContent = paymentAmt;
+    div.append(n, a, c, m, p, 'Total Amount to pay ₹', pay);
+    document.querySelector('#paydiv').append(div);
+  }
+  document.querySelector('#button').addEventListener('click', payMent);
+  function payMent() {
+    var amt = document.querySelector('#price').value;
+    if (amt == paymentAmt) {
+      alert('Your Payment is Successfully Completed. Thank you for shopping.');
+      window.location.href = 'index.html';
+    } else {
+      alert('Payment failed!!!!');
+    }
+  }
+</script>
