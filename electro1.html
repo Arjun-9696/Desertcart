@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Laptop and PC</title>
+    <style>
+      * {
+        font-family: Lato, sans-serif;
+      }
+#header {
+  display: flex;
+  justify-content: space-between;
+  width: 99%;
+  height: 50px;
+  background-color: white;
+}
+#header > div {
+  width: 350px;
+  height: 49px;
+  margin-left: 100px;
+  
+}
+a > img {
+  width: 50px;
+  height: 40px;
+  margin-top: 0;
+}
+svg:hover {
+  background-color: gray;
+  border-radius: 50%;
+  height: 1em;
+  width: 1em;
+}
+
+.header_right {
+  display: flex;
+}
+.Header__right-link {
+  color: #4c505b;
+  cursor: pointer;
+}
+#signorcreat {
+  margin-top: 15px;
+}
+.cartsymbol {
+  width: 50px;
+  height: 50px;
+  margin-left: 20px;
+}
+#cartsymbol > img {
+  height: 100%;
+  width: 100%;
+}
+#cartsymbol > a > img:hover {
+  background-color: gray;
+  border-radius: 50%;
+  height: 100%;
+  width: 100%;
+}
+.Header__right-link:hover {
+  background-color: gray;
+  border-radius: 10px;
+  height: 10px;
+  width: 10px;
+  color: black;
+}
+a{
+    text-decoration-line: none;
+}
+      #container {
+        width: 97%;
+        padding: 20px;
+        background-image: url('https://cdn.desertcart.com/static/media/supportpage.0dc5295a.png');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 100% 100%;
+        margin: auto;
+      }
+      #outer {
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(4, 300px);
+      }
+      #outer > div {
+        width: 270px;
+        margin: 30px;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+          rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+        border-radius: 10px;
+        height: 350px;
+        background-color: white;
+      }
+      #outer > div > div {
+        display: flex;
+      }
+      img {
+        margin-top: 10px;
+        width: 100%;
+        height: 200px;
+        border-radius: 3px;
+      }
+      h2 {
+        margin-top: 0;
+        margin-bottom: 10px;
+        margin-right: 5px;
+        text-align: left;
+        font-size: 13px;
+        height: 34px;
+        font-weight: normal;
+      }
+      button {
+        width: 80%;
+        height: 25px;
+        background-color: rgb(242, 202, 106);
+        border: transparent;
+        border-radius: 30px;
+      }
+      button:hover {
+        background-color: rgb(3, 146, 241);
+        color: white;
+      }
+      h1 {
+        margin: auto;
+        text-align: center;
+      }
+      h2,
+      p,
+      button {
+        margin-left: 20px;
+      }
+      p + p {
+        margin-left: 2px;
+      }
+      p:nth-child(even) {
+        font-weight: bold;
+      }
+      @media only screen and (min-width: 375px) and (max-width: 769px) {
+        #outer {
+          width: 100%;
+          grid-template-columns: repeat(2, 300px);
+        }
+      }
+      @media only screen and (min-width: 0px) and (max-width: 375px) {
+        #outer {
+          grid-template-columns: repeat(1, 300px);
+        }
+      }
+      #bodyhead {
+        width: 50%;
+        height: 50px;
+        display: flex;
+      }
+      #priceSort {
+        width: 150px;
+        height: 25px;
+        background-color: rgb(161, 216, 221);
+        border: 1px solid black;
+        border-radius: 30px;
+        margin-left: 10px;
+        margin-top: 13px;
+      }
+      #help {
+  margin-top: 50px;
+  width: 100%;
+}
+/* Help body */
+#help > div {
+  display: flex;
+}
+.footer {
+  text-align: center;
+  margin: auto;
+}
+.footertitle {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 12px;
+}
+.Footerdescr,
+.footerlink {
+  font-size: 10px;
+  color: grey;
+}
+/* Last body */
+#last {
+  width: 100%;
+  margin-top: 30px;
+
+}
+#last > div {
+  margin: auto;
+  padding: 40px;
+  display: flex;
+}
+#last > div > a > button {
+  border: transparent;
+  width: 100px;
+  background-color: white;
+}
+#last > div > a > button:hover {
+  background-color: grey;
+  cursor: pointer;
+}
+#social {
+  width: 10%;
+  margin: auto;
+}
+#social > div {
+  margin-right: 30px;
+}
+h5 {
+  width: 10%;
+  margin: auto;
+  padding: 15px;
+  text-align: center;
+}
+.SvgIcon-root {
+  fill: currentColor;
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  font-size: 1.2857142857142856rem;
+  transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  flex-shrink: 0;
+  user-select: none;
+  color: black;
+}
+h3{
+   color: black; 
+}
+    </style>
+  </head>
+  <body>
+    <div id="header">
+      <div class="headleft">
+        <a href="index.html"><img src="https://cdn.desertcart.com/static/media/logo.5821c90d.png"/></a>
+      </div>
+      <div class="header_right">
+        <div>
+        </div>
+        <div id="signorcreat">
+          <div>
+            <a href="signin.html"
+              ><span class="Header__right-link">Sign in</span></a
+            ><span>&nbsp;&nbsp;Or&nbsp;&nbsp;</span
+            ><a href="signup.html"
+              ><span class="Header__right-link">Create an Account</span></a
+            >
+          </div>
+        </div>
+        <div class="cartsymbol">
+          <div id="cartsymbol">
+            <a href="cart.html"
+              ><img
+                src="https://img.icons8.com/windows/1000/000000/shopping-cart.png"
+            /></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="container">
+          
+      <div id="bodyhead">
+        <select name="" id="priceSort" onchange="handalpricesort()">
+          <option value="">Sort by : Popularity</option>
+          <option value="low">Low to High</option>
+          <option value="high">High to Low</option>
+        </select>
+      </div>
+      <h1>Online Laptops and Pc Shopping Store in India</h1>
+      <div id="outer"></div>
+    </div>
+
+    <div id="help">
+      <hr>
+      <div>
+            <div class="footer">
+              <a href="mailto:support@desertcart.com">
+                <h3 class="footertitle">Need Help ?</h3>
+                <div class="Footerdescr">We'd love to help you out!
+                  <div>support@desertcart.com</div>
+                </div>
+              </a>
+            </div>
+                <div class="footer">
+                  <a href="tel:+971 4 5245555">
+                  <div class="footerinner">
+                    <svg class="SvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true">
+                      <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"></path></svg>
+                      <div>
+                        <h3 class="footertitle">Phone Support</h3>
+                        <div class="footerlink">+918553535302</div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                        <div class="footer">
+                          <a href="https://secure.livechatinc.com/licence/10652727/v2/open_chat.cgi" target="_blank" rel="noreferrer">
+                            <div class="footerinner">
+                              <svg class="SvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 9h12v2H6V9zm8 5H6v-2h8v2zm4-6H6V6h12v2z"></path></svg>
+                                <div>
+                                  <h3 class="footertitle">24/7 Live Chat</h3>
+                                  <div class="footerlink">Chat with us anytime</div>
+                                </div>
+                              </div>
+                            </a>
+                          </div>
+                                  <div class="footer">
+                                    <a href="/support">
+                                    <div class="footerinner">
+                                      <svg class="SvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true">
+                                        <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z"></path></svg>
+                                        <div>
+                                          <h3 class="footertitle">FAQ</h3>
+                                          <div class="footerlink">Find your answer</div>
+                                        </div>
+                                      </div>
+                                    </a>
+                                    </div>
+    </div>
+    <hr>
+    <div id="last">
+      <div>
+        <a href="https://www.desertcart.ae/support/about"><button>About Us</button></a>
+        <a href="https://www.desertcart.ae/support"><button>Contact</button></a>
+        <a href="https://www.desertcart.ae/blog/"><button>Desertcart Blog</button></a>
+        <a href="https://www.desertcart.ae/refer-friend"><button>Refer Friend</button></a>
+      </div>
+    </div>
+    <h5>Connect with us</h5>
+    <div id="social">
+      <div>
+      <a href="https://www.facebook.com/desertcart"><svg class="SvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2m13 2h-2.5A3.5 3.5 0 0 0 12 8.5V11h-2v3h2v7h3v-7h3v-3h-3V9a1 1 0 0 1 1-1h2V5z"></path></svg></a>
+      </div>
+      <div>
+      <a href="https://www.twitter.com/desertcartmena"><svg class="SvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23z"></path></svg></a>
+      </div>
+      <div>
+      <a href="https://www.instagram.com/desertcart"><svg class="SvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8 1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3z"></path></svg></a>
+      </div>
+    </div>
+  </body>
+</html>
+<script>
+  var products = [
+           {
+        image : "https://m.media-amazon.com/images/I/61CAJnVf5uL.jpg",
+         name : "Lenovo Ideapad Gaming 3, Amd R5-5600H, 15.6 Inch Fhd, 8Gb Ram, 512Gb Ssd, Nvidia Geforce Gtx 1650",
+         price: " 162629",
+     },
+     {
+        image : "https://m.media-amazon.com/images/I/71m03KItMZL.jpg",
+         name : "Acer Nitro 5 AN515-55-53E5 Gaming Laptop | Intel Core i5-10300H | NVIDIA GeForce RTX 3050 Laptop",
+         price: "147549",
+     },
+     {
+        image : "https://m.media-amazon.com/images/I/71dT+SyIpWL.jpg",
+         name : "Acer Nitro5 Gaming NB AMD Ryzen5-4600H/8GB DDR4/1TB HDD+256GB SSD/4GB Nvidia",
+         price: "146379",
+     },
+     {
+        image : "https://m.media-amazon.com/images/I/715+ShfNYmS.jpg",
+         name : "BenQ MOBIUZ EX2710R 27 inch 2K QHD 2560x1440 165Hz Curved Gaming Monitor",
+         price: " 95959",
+     },
+     {
+        image : "https://m.media-amazon.com/images/I/51gRkHScEvL.jpg",
+         name : "BenQ Zowie XL2746S 27 inch 240Hz Esports Gaming Monitor",
+         price: " 85599",
+     },
+     {
+        image : "https://m.media-amazon.com/images/I/618rP0kmhgL.jpg",
+         name : "Glorious Mouse Pad Helios Ultra-Thin XL",
+         price: "3819",
+     },
+     {
+        image : "https://m.media-amazon.com/images/I/71t-CkJh7GL.jpg",
+         name : "Monster Tulpar T7 V21.1 Gaming Notebook, Intel Core i7 10875H CPU",
+         price: "173299",
+     },
+     {
+        image : "https://m.media-amazon.com/images/I/61ugK3+J7SL.jpg",
+         name : "ADATA XPG GAMMIX S70 BLADE 2TB PCIe Gen4x4 M.2 2280 SSD",
+         price: " 56609",
+     },
+     {
+        image : "https://m.media-amazon.com/images/I/716xDApWU5L.jpg",
+         name : "ADATA XPG GAMMIX S70 BLADE 2TB PCIe Gen4x4 M.2 2280 SSD",
+         price: "56609",
+     },
+      {  image : "https://m.media-amazon.com/images/I/81vuuzL5jvL.jpg",
+         name : "HP Pavilion Gaming Desktop, AMD Ryzen 7 5700G Processor, NVIDIA GeForce RTX 2060 Graphic",
+         price: "10049", 
+     },
+     {
+        image : "https://m.media-amazon.com/images/I/51QESpzOWRL.jpg",
+         name : "AVGPC Q-Box Series Gaming PC (Q-Box_5600G) AMD Ryzen 5 5600G 6-Core Cezanne 6-Core 3.9",
+         price: "9389",
+     },
+     {
+         image: "https://m.media-amazon.com/images/I/71A2llPqz7L.jpg",
+         name : "CUK Mantis Custom Gamer PC AMD Ryzen 7 with Radeon Graphics, 32GB 2933MHz DDR4 RAM",
+         price: "1629",
+     },
+     {
+        image : "https://m.media-amazon.com/images/I/61dk7MDMLmL.jpg",
+         name : "CUK Aegis R by MSI Gaming Desktop Liquid Cooled Intel Core i9-12900KF, 64GB DDR4 RAM, ",
+         price: "89389",
+     },
+     {
+        image : "https://m.media-amazon.com/images/I/71PLQmuJIAS.jpg",
+         name : "Periphio Sub-Terra Gaming PC Computer, Ultra-Fast Intel Core i5 6500",
+         price: "145419",
+     },
+     {
+         image : "https://m.media-amazon.com/images/I/615KZ2AUCMS.jpg",
+         name : "CyberPowerPC Gamer Master Gaming Desktop Computer, AMD Ryzen 5 3600 3.6GHz",
+         price: "384139",
+     },
+     {
+         image : "https://m.media-amazon.com/images/I/71pQlzgr88L.jpg",
+         name : "Periphio Vortex Gaming PC Desktop Computer Tower, Intel Quad Core i5 3.2GHz, 16GB RAM",
+         price: " 145419",
+     },
+     {
+         image : "https://m.media-amazon.com/images/I/41JLwrfpCuL.jpg",
+         name : "AMD Ryzen 7 16-Thread Gamer PC AMD Ryzen7 4700G 16-Threads, 4.0GHz, 16GB DDR4-3000",
+         price: "169389",
+     },
+     {
+        image : "https://m.media-amazon.com/images/I/91ep+mWIPYL.jpg",
+         name : "Sony Playstation 3 160GB System",
+         price: "50099",
+     },
+     {
+        image : "https://m.media-amazon.com/images/I/41bHv9ZgxxL.jpg",
+         name : "2021 Newest HP Pavilion Gaming Desktop Computer, AMD 6-Core Ryzen 5 5600G",
+         price: "  208859",
+     },
+     {
+        image : "https://m.media-amazon.com/images/I/41g-DYCbndL.jpg",
+         name : "Hamoor Gaming PC Desktop, Intel Core i9, GeForce RTX 3060 12GB",
+         price: "389519",
+     },
+     {
+        image : "https://m.media-amazon.com/images/I/71l27ivQLoL.jpg",
+         name : "Thermaltake Graphite 360 Gaming PC AMD Ryzen 5 5600X",
+         price: " 389509",
+     },
+     {
+        image : "https://m.media-amazon.com/images/I/71wzxur0SZL.jpg",
+         name : "DASEEN Gaming Computer PC Desktop – Intel Core i5-10400F ",
+         price: "143719",
+     },
+     {
+        image : "https://m.media-amazon.com/images/I/61UY5LzzA0L.jpg",
+         name : "2021 Apple MacBook Pro 14-inch, Apple M1 Pro chip with 8‑core CPU",
+         price: "  460589",
+     },
+     {
+        image : "https://m.media-amazon.com/images/I/81GfvoGyPYL.jpg",
+         name : "2021 ASUS TUF FX706 VR Ready Gaming Laptop, 17.3 144Hz FHD, Intel 11th Gen i5-11260H 6-Core",
+         price: " 191129",
+     }
+
+    ];
+ var cart = JSON.parse(localStorage.getItem('cartData')) || [];
+  displayItems(products);
+  function handalpricesort() {
+    var selected = document.querySelector('#priceSort').value;
+    console.log(selected);
+    if (selected == 'high') {
+      products.sort(function (a, b) {
+        return Number(b.price) - Number(a.price);
+      });
+    }
+    if (selected == 'low') {
+      products.sort(function (a, b) {
+        return Number(a.price) - Number(b.price);
+      });
+    }
+    console.log(products);
+    displayItems(products);
+  }
+
+  function displayItems(products) {
+    document.querySelector('#outer').textContent = '';
+    products.map(function (elem) {
+      var proddiv = document.createElement('div');
+      var img = document.createElement('img');
+      var h2 = document.createElement('h2');
+      var h5 = document.createElement('h5');
+      var displayfl = document.createElement('div');
+      var priceT = document.createElement('p');
+      var price = document.createElement('p');
+      var discount = document.createElement('p');
+      var button = document.createElement('button');
+      priceT.textContent = '₹';
+      discount.textContent = '/-  Discount 30% Off';
+      img.setAttribute('src', elem.image);
+      h2.textContent = elem.name;
+      price.textContent = elem.price;
+      button.textContent = 'Add to Cart';
+      button.addEventListener('click', function () {
+        addCart(elem);
+      });
+      displayfl.append(priceT, price, discount);
+      proddiv.append(img, h2, displayfl, button);
+      document.querySelector('#outer').append(proddiv);
+    });
+  }
+  function addCart(elem) {
+    console.log(elem);
+    cart.push(elem);
+    localStorage.setItem('cartData', JSON.stringify(cart));
+  }
+</script>
